@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-datepicker.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	
+</head>
+<body>
+<input class="from_date" placeholder="Select start date" type="text" name="from_date">
+<input class="to_date" placeholder="Select end date" type="text" name="to_date">
+<script type="text/javascript">
+		$(document).ready(function(){
+			var nowTemp = new Date();
+			var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+	 		$('.from_date').datepicker('setStartDate', now);
+			$(".from_date").datepicker({
+
+			    format: 'yyyy-mm-dd',
+			    autoclose: true,
+			}).on('changeDate', function (selected) {
+			    var startDate = new Date(selected.date.valueOf());
+			    $('.to_date').datepicker('setStartDate', startDate);
+			}).on('clearDate', function (selected) {
+			    $('.to_date').datepicker('setStartDate', null);
+			});
+
+			$(".to_date").datepicker({
+			    format: 'yyyy-mm-dd',
+			    autoclose: true,
+			}).on('changeDate', function (selected) {
+			    var endDate = new Date(selected.date.valueOf());
+			    $('.from_date').datepicker('setEndDate', endDate);
+			}).on('clearDate', function (selected) {
+			    $('.from_date').datepicker('setEndDate', null);
+			});
+		})
+	</script>
+</body>
+</html>

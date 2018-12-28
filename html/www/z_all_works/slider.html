@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div style="height:300px;width:300px;">
+            <img src="./1.png" style="height:100%;width:100%;" id="slider_img"/>
+        </div>
+        <script>
+            var j=0;
+            setInterval(function(){
+                var imgs=["./2.png","./3.png","./1.png"];
+                var i = document.getElementById("slider_img");
+                
+                i.src=imgs[j];
+                j++;
+                if(j==3)
+                    j=0;
+            },1000);
+        </script>
+    </body>
+</html>

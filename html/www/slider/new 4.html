@@ -1,0 +1,101 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>
+test
+</title>
+<link rel="stylesheet" type="text/css" href="./mystyle.css">
+<script>
+function function1(a){
+	var a = document.getElementById('test2');
+	var b = a.style.visibility
+	if(b == 'hidden'){
+		a.style.visibility = 'visible';
+	}else{
+		a.style.visibility = 'hidden';
+	}
+}
+var image1 = new Image();
+image1.src = "image1.jpg";
+
+var image2 = new Image();
+image2.src = "image2.jpg";
+
+var image3 = new Image();
+image3.src = "image3.jpg";
+
+var image4 = new Image();
+image4.src = "image4.jpg";
+
+var image5= new Image();
+image5.src = "image5.jpg";
+</script>
+</head>
+<body>
+	<div id="menue" style="z-index: 2;position: absolute;right: 10px;">
+			<ul>
+				<li><a href="">Home</a></li>
+				<li><a href="">Home1  <i class="down"></i></a>
+					<ul>
+						<li style="margin-top: 10px;"><a href="">sumbhome2</a></li>
+						<li><a href="">sumbhome3</a></li>
+						<li><a href="">sumbhome4 <i class="right"></i></a>
+							<ul>
+								<li><a href="">anil</a></li>
+								<li><a href="">anil</a></li>
+								<li><a href="">anil</a></li>
+								<li><a href="">anil</a></li>
+							</ul>
+						</li>
+						<li><a href="">sumbhome5</a></li>
+					</ul>
+				</li>
+				<li><a href="">Home2</a></li>
+				<li><a href="">Home3</a></li>
+			</ul>
+	</div>
+	<div style="position:relative;">
+		<div style="font-size: 50px;height: 45px;width: 45px;background-color: transparent;cursor:pointer;color: #f00;left:10;top:50%;position: absolute;z-index: 2;padding-bottom: 10px;padding-left: 10px" onclick="changeimagedecrease()"><</div>
+		<img src = "image1.jpg" name = "slide2" width = "100%" height = "900px">
+		<div style="font-size: 50px;height: 45px;width: 45px;background-color:transparent;cursor:pointer;color: #f00;right:10;top:50%;position: absolute;z-index: 2;padding-bottom: 10px;padding-left: 10px" onclick="changeimageincrease()">></div>
+	</div>
+<script>
+	var step = 1;
+
+	function slide1(){
+		document.images.slide2.src = eval("image"+step+".src");
+		if(step < 5)
+			step++;
+		else
+			step = 1;
+		setTimeout("slide1()",1000);
+	}
+	slide1();
+	function changeimageincrease(){
+		//alert("click");
+		slide1();	
+	}
+	function changeimagedecrease(){
+		//alert("click");
+		var a = step - 2
+		if(step == 2){
+			step = 5;
+			setTimeout("slide1()",1000);
+		}else if(step == 1){
+			step = 4;
+			setTimeout("slide1()",1000);
+		}
+		else{
+			step = step - 2;
+		}
+		slide1();
+	}
+</script>
+<div id	= "test" style = "background-color:#ff0;height:200px" onclick = "function1(this)">
+My name is ajajul
+</div>
+<div id	= "test2" style = "background-color:#f00;height:200px" onclick = "function1(this)">
+My name is ajajul
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body{
+
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Baloo Bhai', cursive; */
+    color: #292828e6;
+    background-color: #f1f1f1 !important;
+}
+
+.notice{
+
+    border: 3px solid #b7b735;
+    color: #505013;
+  
+}
+
+.card-details{
+    text-align: justify;
+}
+
+.card-home{
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 305px;
+}
+#services{
+     background-image: url("bg3.jpg");
+     width:100%;
+     height:10%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header{
+     
+         background-image: url("s0.png");
+
+       /*  animation: animatebackground 60s linear infinite;*/
+
+width:100%;
+opacity: 10;
+background-size:100px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* theme */
+
+.theme-dark{
+background: #34363a;color: #dedbdb;}

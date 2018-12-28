@@ -1,0 +1,42 @@
+body{
+	background: #90af44;
+	margin:0;
+	padding: 0;
+	perspective: 800px;
+}
+div{
+	margin:250px auto;
+	text-align: center;
+	color:#fff;
+	font-size: 10em;
+	font-family: arial;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #ccc,0 1px 15px rgba(0,0,0,.2),0 2px 0 #ccc,0 3px 0 #ccc,0 4px 0 #ccc,0 5px 0 #ccc,0 6px 0 #ccc,0 7px 0 #ccc,0 8px 0 #ccc,0 9px 0 #ccc,0 10px 0 #ccc,0 11px 0 #ccc,0 12px 0 #ccc,0 20px 30px rgba(0,0,0,.5);
+	animation: name 5s linear infinite;
+}
+@keyframes name
+{
+	0%{
+		transform: rotateY(40deg);
+		transform-origin: bottom;
+	}
+	20%{
+		transform: rotateX(40deg);
+	}
+	40%{
+		transform: rotateZ(90deg);
+		transform-origin: top;
+	}
+	60%{
+		transform: rotateX(90deg);
+		transform-origin: bottom;
+	}
+	80%{
+		transform: rotateZ(360deg);
+		transform-origin: left;
+	}
+	100%{
+		transform: rotateZ(90deg);
+		transform-origin: right;
+	}
+}

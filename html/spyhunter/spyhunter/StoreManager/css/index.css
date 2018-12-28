@@ -1,0 +1,30 @@
+body{
+
+    font-family: 'Ubuntu', sans-serif;
+    /* font-family: 'Baloo Bhai', cursive; */
+    color: #292828e6;
+    background-color: #f1f1f1 !important;
+}
+
+.notice{
+
+    border: 3px solid #b7b735;
+    color: #505013;
+  
+}
+
+.card-details{
+    text-align: justify;
+}
+
+.card-home{
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 305px;
+}
+
+/* theme */
+
+.theme-dark{
+background: #34363a;color: #dedbdb;}

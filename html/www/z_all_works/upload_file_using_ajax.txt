@@ -1,0 +1,24 @@
+ $(document).ready(function(){  
+  $('#upload_form').on('submit', function(e){  
+	   e.preventDefault();  
+	   if($('#image_file').val() == '')  
+	   {  
+	        alert("Please Select the File");  
+	   }  
+	   else  
+	   {  
+	        $.ajax({  
+			     url:path,
+			     method:"POST",  
+			     data:new FormData(this),  //this identify form
+			     contentType: false,  
+			     cache: false,  
+			     processData:false,  
+			     success:function(data)  
+			     {  
+			          $('#uploaded_image').html(data);  
+			     }  
+	        });  
+	   }  
+	  });  
+ }); 

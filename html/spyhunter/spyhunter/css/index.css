@@ -1,0 +1,69 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #464f60e6;
+    background-color: #d3d3d333;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+/* themes */
+
+.site-theme-bar{
+    color: #174969;
+    font-weight: 600;
+}
+
+.site-theme-color-text{
+    color: #174969;
+    
+}
+
+.site-theme{
+    background-color: #174969;
+    color: white;
+}
+
+
+.nav-bar-theme {
+
+    color: white !important;
+    background-color: #174969 !important;
+
+}
+
+.nav-bar-theme .w3-button:hover{
+    background-color: white !important;
+    color: #174969 !important;
+}
+
+.nav-bar-theme .logo{
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.nav-bar-theme .logo:hover{
+    color: white !important;
+    background-color: #174969 !important;
+}
+
+.site-theme-text-hover-big:hover{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* theme */
+
+.theme-dark{
+    background: #34363a;color: #dedbdb;}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	img{
+		width: 150px;
+		height: 150px;
+	}
+		.main_package{
+			position: relative;
+			height: 150px;
+	width: 150px;
+	margin: 0px auto; 
+	border-width: 0px !important;
+}
+.package_img{
+	position: absolute !important;
+	//display: block !important;
+}
+
+.main_package .package_header{
+	margin-top: 150px;
+	position: absolute; 
+	top: 0;
+}
+.main_package .package_content{
+	position: absolute;
+	height: 100% !important;
+}
+	</style>
+	<script type="text/javascript" src="./jquery.min.js"></script>
+</head>
+<body>
+	<div class="main_package">
+	<img class="package_img" src="./image1.jpg">
+    <div class="package_content">
+        <div class="p3"></div>
+        <div class="package_header">
+            Honeymoon
+        </div>
+        <div class="package_discription">
+           asdjjasbd asdbjsjd jasdka<br>asdsadsad
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(e) {
+   		$('.main_package').hover(function(){
+   			$(this).find('.package_img').hide(500);
+   		},function(){
+   			$(this).find('.package_img').show(500);
+   		});
+});
+</script>
+</body>
+</html>

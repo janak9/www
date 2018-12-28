@@ -1,0 +1,17 @@
+for example, we have test.php and want to run every day using cron job.
+1) Create a shell script test.sh (optional)
+#! /bin/sh
+#wget -q --no-check-certificate -O- "http://swf.site40.net/crontest/test.php"
+php test.php
+
+2) Set up .htaccess to Deny from all in the directory of test.sh
+3) sudo crontab -e
+/*---for php file----*/
+* * * * * php /var/www/html/mywork/cron_demo/test.php &> /var/www/html/mywork/cron_demo/cron_test.log
+
+/*---for sh file----*/
+* * * * * /bin/sh /var/www/html/election/application/controllers/admin/test.sh &> /var/www/html/election/application/controllers/admin/cron_log.log
+
+each night  23:30pm run test.sh 
+4) crontab -l 
+list cron job.

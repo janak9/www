@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<input type="file" name="file" id="upload"/>
+<input type="button" id="Uplad_button" name="upload_file" value="upload"/>
+
+</body>
+</html>
+<script type="text/javascript">
+    document.getElementById("Uplad_button").addEventListener("mouseover", function( event ) {
+        // display the current click count inside the clicked div
+        console.log("hover");
+        $("#upload").trigger('click');
+      }, false);
+$(document).ready(function(){
+/*    var u = document.getElementById("#upload");
+  $('#Uplad_button').on('mouseenter',(function(){  
+    console.log("hover");
+    $("#upload").get(0).click();
+    //$('#Uplad_button').click();
+    //u.trigger("click");
+  })); 
+  $('#Uplad_button').click(function(e){  
+    e.preventDefault();
+    console.log("click");
+    $("#upload").trigger('click');
+  });*/
+});
+</script>
